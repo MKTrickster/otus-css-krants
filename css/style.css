@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+}
+
+h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 86px;
+    color: #000;
+}
+
+/* Header */
+.nav-menu__link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+}
+
+/* Section hero */
+.hero-heading {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 86px;
+    line-height: 120%;
+    color: #000;
+}
+
+.hero-subtitle {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    color: #000;
+}
+
+/* Section Biography */
+.biography__info-skills {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #0d0d0d;
+}
+
+.biography__info-quote-text {
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-size: 26px;
+    color: #0d0d0d;
+}
+
+/* Section Designers */
+
+.designers__name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.designers__info {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+/* Section Testimonials */
+
+.testimonials__site-name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.testimonials__site-link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.testimonials__text {
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #000;
+}
+
+/* Section Strong points */
+
+.strong-points__strengths-item {
+    font-family: "Bitter", serif;
+    font-weight: 400;
+    font-size: 34px;
+    color: #000;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+}
+
+.footer__tel,
+.footer__email {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.footer__sign{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer__createar {
+    color: #fff;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.footer__copyright {
+    font-family: "Robot", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
