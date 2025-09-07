@@ -124,18 +124,62 @@ img{
 }
 
 /* Section Biography */
+
+.biography{
+    padding: 150px 137px;
+}
+
+.biography__container{
+    display: flex;
+    max-width: 1165px;
+    padding: 0;
+}
+
+.biography__heading{
+    writing-mode: sideways-lr;
+    align-self: flex-start;
+    margin: 0 87px 0 29px;
+}
+
+.biography__art-img{
+    width: 49%;
+    object-fit: cover;
+}
+
+.biography__info-name{
+    line-height: 115px;
+}
+
+.biography__info{
+    align-content: center;
+    width: 39%;
+}
+
 .biography__info-skills {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 18px;
     color: #0d0d0d;
+    margin: 36px 0 60px 0;
+}
+
+.biography__info-quote-text::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 6px;
+    top:-20px;
+    background: #000;
 }
 
 .biography__info-quote-text {
+    position: relative;
     font-family: "Bitter", serif;
     font-weight: 400;
     font-size: 26px;
     color: #0d0d0d;
+    max-width: 370px;
+    line-height: 31px;
 }
 
 /* Section Designers */
