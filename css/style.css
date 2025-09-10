@@ -185,6 +185,7 @@ img{
 /* Section Designers */
 
 .designers__name {
+    display: block;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -197,6 +198,37 @@ img{
     font-weight: 400;
     font-size: 16px;
     color: #000;
+}
+
+.designers__heading{
+    margin-bottom: 30px;
+    padding-left: 140px;
+    transform: translateY(-3px);
+}
+
+.designers__slider{
+    display: flex;
+    justify-self: center;
+    align-items: end;
+    overflow: auto;
+    padding-left: 20px;
+    padding-bottom: 1px; /*Текст снизу создает вертикальнй скролл*/
+}
+
+.designers__slider-item:not(:last-child){
+    margin-right: 20px;
+}
+
+.designers__slider-item{
+    flex: 0 0 auto;
+}
+
+.des-big-designer{
+    margin-left: 239px;
+}
+
+.designers__img{
+    margin-bottom: 24px;
 }
 
 /* Section Testimonials */
