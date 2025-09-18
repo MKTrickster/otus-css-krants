@@ -138,7 +138,7 @@ img{
 .biography__heading{
     writing-mode: sideways-lr;
     align-self: flex-start;
-    margin: 0 87px 0 29px;
+    margin: 0 84px 0 32px;
 }
 
 .biography__art-img{
@@ -148,6 +148,7 @@ img{
 
 .biography__info-name{
     line-height: 115px;
+    transform: translateY(2px);
 }
 
 .biography__info{
@@ -160,7 +161,7 @@ img{
     font-weight: 500;
     font-size: 18px;
     color: #0d0d0d;
-    margin: 36px 0 60px 0;
+    margin: 42px 0 63px 0;
 }
 
 .biography__info-quote-text::before{
@@ -168,7 +169,7 @@ img{
     position: absolute;
     width: 20px;
     height: 6px;
-    top:-20px;
+    top:-23px;
     background: #000;
 }
 
@@ -183,6 +184,11 @@ img{
 }
 
 /* Section Designers */
+
+.designers__container{
+    padding-top: 5px;
+}
+
 
 .designers__name {
     display: block;
@@ -234,7 +240,7 @@ img{
 /* Section Testimonials */
 
 .testimonials{
-    padding: 150px 0 150px;
+    padding: 155px 0 155px;
 }
 
 .testimonials__container{
@@ -254,7 +260,7 @@ img{
     justify-content: space-between;
     align-items: end;
     margin-right: 20px;
-    padding: 20px 0 20px 0;
+    padding: 42px 0 35px 0;
 }
 
 .testimonials__left-img{
@@ -266,8 +272,8 @@ img{
 .testimonials__heading{
     writing-mode: sideways-lr;
     align-self: flex-start;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 24px;
+    margin-right: 17px;
 }
 
 .testimonials__right-content{
@@ -279,6 +285,7 @@ img{
 
 .testimonials__right-img{
     margin-top: 42px;
+    transform: translateX(5px);
 }
 
 .testimonials__quote{
@@ -290,6 +297,7 @@ img{
     font-weight: 700;
     font-size: 16px;
     color: #000;
+    transform: translateX(-2px);
 }
 
 .testimonials__site-link {
@@ -307,20 +315,86 @@ img{
     line-height: 38px;
     color: #000;
     justify-self: center;
+    transform: translateX(3px);
 }
 
 /* Section Strong points */
+
+.strong-points{
+    padding-bottom: 145px;
+}
+
+.strong-points__heading{
+    margin-bottom: 30px;
+    padding-left: 140px;
+    transform: translateY(-3px);
+}
+
+.strong-points__slider{
+    display: flex;
+    gap:20px;
+    justify-self: center;
+    padding-left: 20px;
+    overflow: auto;
+}
+
+.strong-points__slider-item{
+    flex: 0 0 auto;
+}
+
+
+@supports(display: grid){
+    .strong-points__slider{
+        display: grid;
+        grid-auto-flow: column;
+        max-width: 100%;
+    }
+
+    .strong-points__slider-item{
+        width: 335px;
+    }
+
+    .strong-points__slider-text{
+        width: 450px;
+    }
+}
+
+
+.strong-points__title{
+    margin-bottom: 28px;
+}
+
+.strong-points__slider-text{
+    padding: 0 38px 18px 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .strong-points__strengths-item {
     font-family: "Bitter", serif;
     font-weight: 400;
     font-size: 34px;
     color: #000;
+    line-height: 42px;
+    transform: translateX(-7px);
 }
 
 /* Footer */
 .footer {
     background-color: black;
+}
+
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    padding: 70px 20px;
+}
+
+.footer__contact-info{
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__tel,
@@ -339,6 +413,7 @@ img{
     font-weight: 500;
     font-size: 18px;
     color: #fff;
+    justify-self: center;
 }
 
 .footer__createar {
@@ -352,4 +427,6 @@ img{
     font-weight: 400;
     font-size: 16px;
     color: #fff;
+    justify-self: end;
+    transform: translateX(4px);
 }
