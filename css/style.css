@@ -431,6 +431,7 @@ img{
 }
 
 /* Footer */
+
 .footer {
     background-color: black;
 }
@@ -533,11 +534,17 @@ img{
 
     .hero{
         min-height: 685px;
-        background: url('../img/inside-weather-Uxqlfigh6oE-unsplash 2.jpg') bottom left/ cover no-repeat;
+        background: url('../img/inside-weather-Uxqlfigh6oE-unsplash-tablet.jpg') bottom left/ cover no-repeat;
         align-items: start;
         width: 100%;
     }
     
+    @media(min-resolution:200dpi),(min-resolution:1.5dppx){
+        .hero{
+            background-image:url("../img/inside-weather-Uxqlfigh6oE-unsplash-tablet@2x.jpg");
+        }
+    }
+
     .hero__container{
         height: 100%;
         width: 100%;
@@ -795,6 +802,7 @@ img{
     }
 
     /* Footer */
+
     .footer__container{
         padding: 44px 16px;
         grid-template-columns: 1fr;
@@ -814,4 +822,74 @@ img{
         justify-self: start;
         transform: translateY(-5px);
     }
+
+@media (max-width:450px){
+    
+    /* Header */
+
+    .nav-menu__list{
+        gap: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+  
+    /* Section Biography */
+
+    .biography__heading{
+        padding: 0px 25px 0px 0px;
+    }
+
+    .biography__info{
+        padding-left: 18px;
+    }
+
+    .biography__info-quote-text{
+        margin-bottom: 30px;
+    }
+
+    /* Section Testimonials */
+
+    .modal-icon{
+        display: block;
+    }
+
+    picture{
+        width: 100%;
+        height:330px;
+    }
+
+    .testimonials__right-content{
+        height: auto;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .testimonials__text-tablet:nth-child(1){
+        display: none;
+    }
+    
+    .testimonials__right-img{
+        width: 100%;
+    }
+
+    .testimonials__quote{
+        width: 100%;
+        margin: 0;
+    }
+
+    .testimonials__text{
+        max-width: 342px;
+        justify-self: center;
+    }
+
+    .designers__slider{
+        justify-self: auto;
+    }
+
+    /* Section Strong points */
+
+    .strong-points__container{
+        padding: 0 0 0 16px;
+    }
+}
 }
