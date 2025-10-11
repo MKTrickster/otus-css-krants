@@ -7,8 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -16,24 +14,31 @@
         <div class="container header__container">
             <!-- Logo -->
             <a href="./index.html" class="logo">
-                <img src="./img/Mod.svg" alt="Mod-logo" class="logo-img">
+                <img src="./img/Mod.svg" alt="Mod-logo" class="logo__img">
             </a>
             <!-- Main menu and links -->
             <nav class="nav-menu">
                 <ul class="nav-menu__list">
                     <li class="nav-menu__item">
                         <a href="#biography" class="nav-menu__link">Biography</a>
+                        <a href="#biography" class="nav-menu__link-tamblet">B</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#designers" class="nav-menu__link">Designers</a>    
+                        <a href="#designers" class="nav-menu__link">Designers</a>
+                        <a href="#designers" class="nav-menu__link-tamblet">D</a>    
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#testimonials" class="nav-menu__link">Testimonials</a>    
+                        <a href="#testimonials" class="nav-menu__link">Testimonials</a>
+                        <a href="#testimonials" class="nav-menu__link-tamblet">T</a>    
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#strong-points" class="nav-menu__link">Strong points</a>    
+                        <a href="#strong-points" class="nav-menu__link">Strong points</a>
+                        <a href="#strong-points" class="nav-menu__link-tamblet">S</a>    
                     </li>
                 </ul>
+                <div class="modal-icon">
+                    <img src="./img/icon-message.svg" class ="modal-icon__img" alt="icon message for modal dialog">
+                </div>
             </nav>
         </div>
     </header>
@@ -41,21 +46,34 @@
         <!-- Section Hero -->
         <section class="hero">
             <div class="container hero__container">
-                <h1 class="hero-heading">Mod Studio</h1>
-                <p class="hero-subtitle">Modern Web Studio</p>
+                <div class="hero__info">
+                    <h1 class="hero__heading">Mod Studio</h1>
+                    <p class="hero__subtitle">Modern Web Studio</p>
+                </div>
             </div>
         </section>
         <!-- Section Biography -->
         <section class="biography" id="biography">
             <div class="container biography__container">
-                <img src="./img/jared-weiss-P3cB0ynqYBw-unsplash.jpg" alt="Photo by Katya Mills" class="biography__art-img">
+                <img srcset="./img/jared-weiss-P3cB0ynqYBw-unsplash.jpg 1x, ./img/jared-weiss-P3cB0ynqYBw-unsplash@2x.jpg 2x" src="./img/jared-weiss-P3cB0ynqYBw-unsplash.jpg" alt="Photo by Katya Mills" class="biography__art-img">
                 <h2 class="biography__heading">Biography</h2>
                 <div class="biography__info">
-                    <h3 class="biography__info-name">Katya<br>Mills</h3>
-                    <p class="biography__info-skills">Art Director<br>
-                    Scenography / Styling / Creative Photography / Design</p>
+                    <h3 class="biography__info-name">Katya Mills</h3>
+                    <div class="biography__info-skills">
+                        Art Director
+                        <ul class="biography__skill-list">
+                            <li class="biography__list-item">Scenography</li>
+                            <li class="biography__list-item">Styling</li>
+                            <li class="biography__list-item">Creative Photography</li>
+                            <li class="biography__list-item">Design</li>
+                        </ul>
+                    </div>
                     <blockquote class="biography__info-quote">
-                        <p class="biography__info-quote-text">“The more I deal with the work as something that is my own, as something that is personal, the more successful it is.”</p>
+                        <p class="biography__info-quote-text">
+                            “The more I deal with<br class="biography__info-quote-space">
+                            the work as something that is my own, <br class="biography__info-quote-space">
+                            as something that<br class="biography__info-quote-space">
+                            is personal, the more successful it is.”</p>
                     </blockquote>
                 </div>
             </div>
@@ -67,7 +85,7 @@
                 <ul class="designers__slider">
                     <li class="designers__slider-item">
                         <img src="./img/spurwing-agency-r6LceZ3ckpM-unsplash.jpg" alt="Photo by Jess Wonder" class="designers__img">
-                        <div class="des-big-designer">
+                        <div class="designers__big-designer">
                             <strong class="designers__name">JESS WONDER</strong>
                             <p class="designers__info"><strong>From/ </strong>Be more flower<br>
                                 <strong>Skills/</strong> Design Strategy / Marketing</p>
@@ -115,9 +133,15 @@
                 <h2 class="testimonials__heading">Testimonials</h2>
                 <div class="testimonials__right-content">
                     <blockquote class="testimonials__quote">
-                        <p class="testimonials__text">I just really want to do good work and work with some great people, people who challenge me.</p>
+                        <p class="testimonials__text">I just really want<br class="testimonials__text-tablet"> 
+                            to do good work and work <br class="testimonials__text-tablet">
+                            with some great people,<br class="testimonials__text-tablet"> 
+                            people who challenge<br class="testimonials__text-tablet"> me.</p>
                     </blockquote>
-                    <img src="./img/sinitta-leunen-YaReHIzNdRw-unsplash.jpg" alt="The walking man" class="testimonials__right-img">
+                    <picture>
+                        <source srcset="./img/sinitta-leunen-YaReHIzNdRw-unsplash-tablet.jpg" media="(max-width: 768px)"/>
+                        <img src="./img/sinitta-leunen-YaReHIzNdRw-unsplash.jpg" alt="The walking man" class="testimonials__right-img">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -125,7 +149,7 @@
         <section class="strong-points" id="strong-points">
             <div class="strong-points__container">
                 <h2 class="container strong-points__heading">Strong points</h2>
-                <ul class="strong-points__slider">
+                <ul class="container strong-points__slider">
                     <li class="strong-points__slider-item">
                         <img src="./img/dawid-liberadzki-vPFbVB7DPZI-unsplash.jpg" alt="Modern-style room with a desk and laptop" class="strong-points__img">
                     </li>
