@@ -109,10 +109,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 .container {
   max-width: 1440px;
   padding: 0 20px 0 20px;
@@ -200,28 +196,63 @@ img {
   color: #A07C72;
 }
 
+.mobal__btn {
+  background: none;
+  border: none;
+}
+
 .modal-icon__img {
   max-width: 50px;
   cursor: pointer;
 }
 
-.nav-menu__link-tamblet{
-    display: none;
-    width: 12vw;
-    font-family: "Bitter", serif;
-    font-size: 40px;
-    font-weight: 400;
-    color: #000;
-    transition: color 0.3s ease-in-out;
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+  background-color: rgba(129, 126, 126, 0.6);
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.modal_active {
+  visibility: visible;
+  opacity: 1;
 }
 
-.nav-menu__link-tamblet:hover{
-    color:#A07C72;
+.form-getInTouch {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 475px;
+  height: 589px;
+  padding: 20px;
+  background-color: #fff;
+  transform: scale(0.8);
+  border-radius: 10px;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
-.modal-icon__img{
-    max-width: 50px;
-    cursor: pointer;
+.form-getInTouch_active {
+  transform: scale(1);
+  opacity: 1;
+}
+.form-getInTouch__heading {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
+  line-height: 1.13;
+}
+.form-getInTouch__description {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  line-height: 1.19;
 }
 
 /* Section hero */
@@ -327,10 +358,6 @@ img {
 }
 .biography__info-quote-space {
   display: none;
-}
-
-.biography__info-quote-space{
-    display: none;
 }
 
 /* Section Designers */
@@ -506,7 +533,6 @@ img {
   }
 }
 /* Footer */
-
 .footer {
   background-color: #000;
 }
