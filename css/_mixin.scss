@@ -1,0 +1,23 @@
+@mixin centerItem() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fontRoboto($size, $weight) {
+  font-family: "Roboto", sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin fontPlayfair($size, $weight) {
+  font-family: "Playfair Display", serif;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin fontBitter($size, $weight) {
+  font-family: "Bitter", serif;
+  font-weight: $weight;
+  font-size: $size;
+}
