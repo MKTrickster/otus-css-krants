@@ -100,12 +100,129 @@ img {
     }
 
 }
+.mobal__btn{
+    background: none;
+    border: none;
+}
 
 .modal-icon__img {
     max-width: 50px;
     cursor: pointer;
 }
 
+.modal{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    background-color: rgba(129, 126, 126, 0.6);
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;;
+
+    &_active{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.form-getInTouch{
+    margin-top: 78px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 475px;
+    height: 589px;
+    padding: 20px;
+    background-color: #fff;
+    transform: scale(0.8);
+    border-radius: 10px;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    &_active{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    &__heading,
+    &__description{
+        padding: 0 6px;
+    }
+
+    &__heading{
+        @include fontRoboto(22px,700);
+        color: $colorText;
+        line-height: 1.18;
+    }
+    &__description{
+        @include fontRoboto(16px,400);
+        color: $colorText;
+        line-height: 1.4;
+    }
+}
+
+label{
+    display: flex;
+    padding: 0 6px 8px 4px;
+    flex-direction: column;
+    gap: 12px;
+    color: $colorText;
+    @include fontRoboto(18px, 500);
+}
+
+input,
+textarea{
+    border-radius: 8px;
+    border: 1px solid #B3B3B3;
+    border-width: 1px;
+    @include fontRoboto(16px, 400);
+}
+
+input{
+    padding: 12.5px 10px;
+}
+
+textarea{
+    padding: 11px 10px 53px 10px;
+    resize: none;
+}
+
+::placeholder{
+    @include fontRoboto(16px, 400);
+}
+
+.form-getInTouch__btns{
+    padding: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+%base-btn{
+    padding: 14px 0;
+    border-radius: 8px;
+    border: 1px solid #B3B3B3;
+    background-color: $secondText;
+    color: $colorText;
+    @include fontRoboto(18px,500 );
+    cursor: pointer;
+}
+
+.form-getInTouch__cancel{
+    @extend %base-btn;
+}
+
+.form-getInTouch__send{
+    @extend %base-btn;
+    border: none;
+    background-color: $colorText;
+    color: $secondText;
+}
+
+.form-getInTouch__send-decor{
+    margin-right: 10px;
+}
 /* Section hero */
 
 .hero {
