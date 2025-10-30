@@ -100,11 +100,62 @@ img {
     }
 
 }
+.mobal__btn{
+    background: none;
+    border: none;
+}
 
 .modal-icon__img {
     max-width: 50px;
     cursor: pointer;
 }
+
+.modal{
+    position: fixed;
+    @include centerItem();
+    display: flex;
+    visibility: hidden;
+    background-color: rgba(129, 126, 126, 0.6);
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;;
+
+    &_active{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.form-getInTouch{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 475px;
+    height: 589px;
+    padding: 20px;
+    background-color: #fff;
+    transform: scale(0.8);
+    border-radius: 10px;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    &_active{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    &__heading{
+        @include fontRoboto(24px,700);
+        color: $colorText;
+        line-height: 1.13;
+    }
+    &__description{
+        @include fontRoboto(16px,400);
+        color: $colorText;
+        line-height: 1.19;
+    }
+}
+
 
 /* Section hero */
 
