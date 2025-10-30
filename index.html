@@ -211,11 +211,28 @@
         </div>
     </footer>
     <div class="modal" id="modalGetInTouch">
-        <form action="" class="form-getInTouch">
+        <form action="#" class="form-getInTouch">
             <p class="form-getInTouch__heading">Get in touch</p>
-            <p class="form-getInTouch__description">Do you have any questions? Have something to say?
-                Don't be shy, write to us:</p>
-            <button class="form-getInTouch__cancel" type="button" onclick="closeForm()">Cancel</button>
+            <p class="form-getInTouch__description">
+                Do you have any questions? Have something to say?<br>
+                Don't be shy, write to us:
+            </p>
+            <label for="name">
+                Name
+                <input type="text" name="fullname" id="name" placeholder="3+ Characters" autocomplete="name" required>
+            </label>
+            <label for="email">
+                E-mail
+                <input type="email" name="email" id="email" placeholder="name@email.com" autocomplete="email" required>
+            </label>
+            <label for="comment">
+                Comment
+                <textarea type="text" name="comment" id="comment" placeholder="Some text..." autocomplete="off" required></textarea>
+            </label>
+            <div class="form-getInTouch__btns">
+                <button class="form-getInTouch__cancel" type="button" onclick="closeForm()">Cancel</button>
+                <button class="form-getInTouch__send" type="submit">Send</button>
+            </div>
         </form>
     </div>
     <script>
