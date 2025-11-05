@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
@@ -217,21 +218,32 @@
                 Do you have any questions? Have something to say?<br>
                 Don't be shy, write to us:
             </p>
-            <label for="name">
+            <label for="name" class="name">
                 Name
                 <input type="text" name="fullname" id="name" placeholder="3+ Characters" autocomplete="name" required>
+                <svg class="name-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5 9.75C15.9162 9.75 17.875 7.79125 17.875 5.375C17.875 2.95875 15.9162 1 13.5 1C11.0838 1 9.125 2.95875 9.125 5.375C9.125 7.79125 11.0838 9.75 13.5 9.75Z" stroke="#868686" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 24.125C1 18.6019 6.03688 14.125 12.25 14.125M17.875 24.75L24.125 18.5L21.625 16L15.375 22.25V24.75H17.875Z" stroke="#868686" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </label>
-            <label for="email">
+            <label for="email" class="email">
                 E-mail
                 <input type="email" name="email" id="email" placeholder="name@email.com" autocomplete="email" required>
+                <span class="email-icon fa-regular fa-at"></span>
             </label>
-            <label for="comment">
+            <label for="comment" class="comment">
                 Comment
                 <textarea type="text" name="comment" id="comment" placeholder="Some text..." autocomplete="off" required></textarea>
+                <svg class="comment-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.9287 0.0107422C22.3314 0.238855 25.789 3.95924 25.7891 8.57324V12.3838L25.7783 12.8271C25.5651 17.234 22.1895 20.7255 17.9287 20.9463L17.5 20.957H13.1709L12.7734 20.9619C8.6756 21.0598 4.6882 22.6686 1.56543 25.5293C1.38122 25.6245 1.10505 25.7197 0.920898 25.7197C0.828814 25.7197 0.644855 25.72 0.552734 25.625C0.230522 25.4584 0.0491945 25.2186 0.00878906 24.9062L0 24.7676V8.57324C4.77025e-05 3.81039 3.68404 0.000102579 8.28906 0H17.5L17.9287 0.0107422ZM8.28906 2C4.8516 2.0001 2.00005 4.8509 2 8.57324V22.6006C5.2729 20.2397 9.17837 18.957 13.1709 18.957H17.5C20.9373 18.9568 23.789 16.106 23.7891 12.3838V8.57324C23.789 4.85101 20.9373 2.00026 17.5 2H8.28906ZM8.4541 8.95117C9.27791 8.95123 9.94524 9.61858 9.94531 10.4424C9.94531 11.2662 9.27795 11.9345 8.4541 11.9346C7.6302 11.9346 6.96191 11.2663 6.96191 10.4424C6.96199 9.61855 7.63025 8.95117 8.4541 8.95117ZM13.4258 8.95117C14.2496 8.95117 14.9179 9.61855 14.918 10.4424C14.918 11.2663 14.2497 11.9346 13.4258 11.9346C12.602 11.9344 11.9346 11.2662 11.9346 10.4424C11.9346 9.61865 12.6021 8.95134 13.4258 8.95117ZM18.3994 8.95117C19.2232 8.95127 19.8906 9.6186 19.8906 10.4424C19.8906 11.2662 19.2232 11.9345 18.3994 11.9346C17.5755 11.9346 16.9072 11.2663 16.9072 10.4424C16.9073 9.61855 17.5756 8.95117 18.3994 8.95117Z" fill="#868686"/>
+                </svg>
             </label>
             <div class="form-getInTouch__btns">
                 <button class="form-getInTouch__cancel" type="button" onclick="closeForm()">Cancel</button>
-                <button class="form-getInTouch__send" type="submit">Send</button>
+                <button class="form-getInTouch__send" type="submit">
+                    <span class="form-getInTouch__send-icon fa-regular fa-plus"></span>
+                    Send
+                </button>
             </div>
         </form>
     </div>

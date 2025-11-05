@@ -128,6 +128,7 @@ img {
 
 .form-getInTouch{
     margin-top: 78px;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -139,6 +140,7 @@ img {
     border-radius: 10px;
     opacity: 0;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 1;
 
     &_active{
         transform: scale(1);
@@ -160,6 +162,19 @@ img {
         color: $colorText;
         line-height: 1.4;
     }
+    &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $secondText;
+    border-radius: 10px;
+    transform: rotate(2deg);
+    transform-origin: center;
+    z-index: -1;
+    }
 }
 
 label{
@@ -180,11 +195,35 @@ textarea{
 }
 
 input{
-    padding: 12.5px 10px;
+    padding: 10.5px 10px;
+}
+
+.name,
+.email,
+.comment{
+    position: relative;
+}
+
+.name-icon,
+.email-icon{
+    position: absolute;
+    top:50%;
+    right: 20px;
+}
+
+.email-icon{
+    font-size: 24px;
+    color:$colorIcon;
+}
+
+.comment-icon{
+    position: absolute;
+    top:30%;
+    right: 20px;
 }
 
 textarea{
-    padding: 11px 10px 53px 10px;
+    padding: 11px 10px 45px 10px;
     resize: none;
 }
 
@@ -211,6 +250,10 @@ textarea{
 
 .form-getInTouch__cancel{
     @extend %base-btn;
+}
+
+.form-getInTouch__send-icon{
+    transform: translate(-7px,2px);
 }
 
 .form-getInTouch__send{
@@ -630,6 +673,11 @@ textarea{
         width: 89px;
     }
 
+    .form-getInTouch{
+        width: 442px;
+        margin-top: 130px;
+    }
+
     /* Hero section */
 
     .hero {
@@ -932,6 +980,11 @@ textarea{
 
     .modal-icon {
         display: block;
+    }
+
+    .form-getInTouch{
+        width: 363px;
+        margin-top: 118px;
     }
 
     /* Section Biography */
