@@ -135,7 +135,7 @@ img {
     width: 475px;
     height: 589px;
     padding: 20px;
-    background-color: #fff;
+    background-color: $secondText;
     transform: scale(0.8);
     border-radius: 10px;
     opacity: 0;
@@ -189,9 +189,20 @@ label{
 input,
 textarea{
     border-radius: 8px;
-    border: 1px solid #B3B3B3;
+    border: 1px solid $color-border-default;
     border-width: 1px;
     @include fontRoboto(16px, 400);
+    transition: all 0.3s ease-in-out;
+    outline: none;
+
+    &:hover{
+        background-color: $color-border-default;
+    }
+
+    &:focus{
+       border: 1px solid $background-active;
+       background-color: $secondText;
+    }
 }
 
 input{
@@ -202,6 +213,34 @@ input{
 .email,
 .comment{
     position: relative;
+
+    .name-icon,
+    .email-icon,
+    .comment-icon{
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:has(input:not(:placeholder-shown)) .name-icon,
+    &:has(input:not(:placeholder-shown)) .email-icon,
+    &:has(textarea:not(:placeholder-shown)) .comment-icon {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:focus-within{
+        .name-icon,
+        .email-icon,
+        .comment-icon{
+            path{
+                stroke: $background-active;
+            }
+        }
+
+        .email-icon{
+            color: $background-active;
+        }
+    }
 }
 
 .name-icon,
@@ -241,7 +280,7 @@ textarea{
 %base-btn{
     padding: 14px 0;
     border-radius: 8px;
-    border: 1px solid #B3B3B3;
+    border: 1px solid $color-border-default;
     background-color: $secondText;
     color: $colorText;
     @include fontRoboto(18px,500 );
@@ -250,6 +289,27 @@ textarea{
 
 .form-getInTouch__cancel{
     @extend %base-btn;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover{
+        background-color: $background-hover;
+        border: 1px solid $color-border-hover; 
+    }
+
+    &:active{
+        background-color: $background-active;
+        border: 1px solid $color-border-active;
+    }
+
+    &:focus:not(:active){
+        outline: 1.5px solid $color-focus-outline;
+        outline-offset: 2px; 
+    }
+
+    &:disabled{
+        color: $secondText;
+        border: 1px solid $color-border-disabled;
+    }
 }
 
 .form-getInTouch__send-icon{
@@ -261,6 +321,24 @@ textarea{
     border: none;
     background-color: $colorText;
     color: $secondText;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover{
+        background-color: $linkHover;
+    }
+
+    &:active{
+        background-color: $background-active;
+    }
+
+    &:focus:not(:active){
+        outline: 1.5px solid $color-focus-outline;
+        outline-offset: 2px; 
+    }
+
+    &:disabled{
+        background-color: #CCCCCC;
+    }
 }
 
 .form-getInTouch__send-decor{

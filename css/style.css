@@ -291,6 +291,17 @@ textarea {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+input:hover,
+textarea:hover {
+  background-color: #B3B3B3;
+}
+input:focus,
+textarea:focus {
+  border: 1px solid #E0B59F;
+  background-color: #fff;
 }
 
 input {
@@ -301,6 +312,48 @@ input {
 .email,
 .comment {
   position: relative;
+}
+.name .name-icon,
+.name .email-icon,
+.name .comment-icon,
+.email .name-icon,
+.email .email-icon,
+.email .comment-icon,
+.comment .name-icon,
+.comment .email-icon,
+.comment .comment-icon {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.name:has(input:not(:-moz-placeholder)) .name-icon, .name:has(input:not(:-moz-placeholder)) .email-icon, .name:has(textarea:not(:-moz-placeholder)) .comment-icon, .email:has(input:not(:-moz-placeholder)) .name-icon, .email:has(input:not(:-moz-placeholder)) .email-icon, .email:has(textarea:not(:-moz-placeholder)) .comment-icon, .comment:has(input:not(:-moz-placeholder)) .name-icon, .comment:has(input:not(:-moz-placeholder)) .email-icon, .comment:has(textarea:not(:-moz-placeholder)) .comment-icon {
+  opacity: 0;
+  visibility: hidden;
+}
+.name:has(input:not(:placeholder-shown)) .name-icon, .name:has(input:not(:placeholder-shown)) .email-icon, .name:has(textarea:not(:placeholder-shown)) .comment-icon,
+.email:has(input:not(:placeholder-shown)) .name-icon,
+.email:has(input:not(:placeholder-shown)) .email-icon,
+.email:has(textarea:not(:placeholder-shown)) .comment-icon,
+.comment:has(input:not(:placeholder-shown)) .name-icon,
+.comment:has(input:not(:placeholder-shown)) .email-icon,
+.comment:has(textarea:not(:placeholder-shown)) .comment-icon {
+  opacity: 0;
+  visibility: hidden;
+}
+.name:focus-within .name-icon path,
+.name:focus-within .email-icon path,
+.name:focus-within .comment-icon path,
+.email:focus-within .name-icon path,
+.email:focus-within .email-icon path,
+.email:focus-within .comment-icon path,
+.comment:focus-within .name-icon path,
+.comment:focus-within .email-icon path,
+.comment:focus-within .comment-icon path {
+  stroke: #E0B59F;
+}
+.name:focus-within .email-icon,
+.email:focus-within .email-icon,
+.comment:focus-within .email-icon {
+  color: #E0B59F;
 }
 
 .name-icon,
@@ -357,6 +410,26 @@ textarea {
   cursor: pointer;
 }
 
+.form-getInTouch__cancel {
+  transition: all 0.3s ease-in-out;
+}
+.form-getInTouch__cancel:hover {
+  background-color: #D7C8C1;
+  border: 1px solid #E0B59F;
+}
+.form-getInTouch__cancel:active {
+  background-color: #E0B59F;
+  border: 1px solid #D7C8C1;
+}
+.form-getInTouch__cancel:focus:not(:active) {
+  outline: 1.5px solid #E0B59F;
+  outline-offset: 2px;
+}
+.form-getInTouch__cancel:disabled {
+  color: #fff;
+  border: 1px solid #CCCCCC;
+}
+
 .form-getInTouch__send-icon {
   transform: translate(-7px, 2px);
 }
@@ -365,6 +438,20 @@ textarea {
   border: none;
   background-color: #000;
   color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.form-getInTouch__send:hover {
+  background-color: #A07C72;
+}
+.form-getInTouch__send:active {
+  background-color: #E0B59F;
+}
+.form-getInTouch__send:focus:not(:active) {
+  outline: 1.5px solid #E0B59F;
+  outline-offset: 2px;
+}
+.form-getInTouch__send:disabled {
+  background-color: #CCCCCC;
 }
 
 .form-getInTouch__send-decor {
