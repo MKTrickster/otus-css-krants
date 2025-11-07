@@ -85,6 +85,21 @@ img {
         &:hover::after {
             width: 100%;
         }
+
+        &:active{
+            color: $background-active;
+            
+            &::after {
+            width: 0;
+            }
+        }
+
+        &:focus-visible{
+            color: $linkHover;
+            border-radius: 5px;
+            outline: 1.5px solid $color-focus-outline;
+            outline-offset: 5px;
+        }
     }
 
     &__link-tamblet {
@@ -97,12 +112,43 @@ img {
         &:hover {
             color: $linkHover;
         }
+        
+        &:active{
+            color: $background-active;
+        }
+
+        &:focus{
+            color: $linkHover;
+            border-radius: 5px;
+            outline: 1.5px solid $color-focus-outline;
+            outline-offset: 5px;
+        }
     }
 
 }
 .mobal__btn{
     background: none;
     border: none;
+    display: flex;
+    @include centerItem();
+
+    &:hover .modal-icon__img path {
+        transition: all 0.3s ease-in-out;
+        fill: $linkHover;
+    }
+
+    &:active .modal-icon__img path {
+        fill: $background-active;
+    }
+
+    &:focus-visible{
+        border-radius: 10px;
+        outline: 1px solid $color-focus-outline;
+    }
+
+    &:focus-visible .modal-icon__img path {
+        fill: $linkHover;
+    }
 }
 
 .modal-icon__img {
@@ -190,7 +236,6 @@ input,
 textarea{
     border-radius: 8px;
     border: 1px solid $color-border-default;
-    border-width: 1px;
     @include fontRoboto(16px, 400);
     transition: all 0.3s ease-in-out;
     outline: none;
@@ -301,7 +346,7 @@ textarea{
         border: 1px solid $color-border-active;
     }
 
-    &:focus:not(:active){
+    &:focus-visible{
         outline: 1.5px solid $color-focus-outline;
         outline-offset: 2px; 
     }
@@ -331,7 +376,7 @@ textarea{
         background-color: $background-active;
     }
 
-    &:focus:not(:active){
+    &:focus-visible{
         outline: 1.5px solid $color-focus-outline;
         outline-offset: 2px; 
     }

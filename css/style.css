@@ -183,6 +183,18 @@ img {
 .nav-menu__link:hover::after {
   width: 100%;
 }
+.nav-menu__link:active {
+  color: #E0B59F;
+}
+.nav-menu__link:active::after {
+  width: 0;
+}
+.nav-menu__link:focus-visible {
+  color: #A07C72;
+  border-radius: 5px;
+  outline: 1.5px solid #E0B59F;
+  outline-offset: 5px;
+}
 .nav-menu__link-tamblet {
   display: none;
   width: 12vw;
@@ -195,10 +207,37 @@ img {
 .nav-menu__link-tamblet:hover {
   color: #A07C72;
 }
+.nav-menu__link-tamblet:active {
+  color: #E0B59F;
+}
+.nav-menu__link-tamblet:focus {
+  color: #A07C72;
+  border-radius: 5px;
+  outline: 1.5px solid #E0B59F;
+  outline-offset: 5px;
+}
 
 .mobal__btn {
   background: none;
   border: none;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobal__btn:hover .modal-icon__img path {
+  transition: all 0.3s ease-in-out;
+  fill: #A07C72;
+}
+.mobal__btn:active .modal-icon__img path {
+  fill: #E0B59F;
+}
+.mobal__btn:focus-visible {
+  border-radius: 10px;
+  outline: 1px solid #E0B59F;
+}
+.mobal__btn:focus-visible .modal-icon__img path {
+  fill: #A07C72;
 }
 
 .modal-icon__img {
@@ -287,7 +326,6 @@ input,
 textarea {
   border-radius: 8px;
   border: 1px solid #B3B3B3;
-  border-width: 1px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -421,7 +459,7 @@ textarea {
   background-color: #E0B59F;
   border: 1px solid #D7C8C1;
 }
-.form-getInTouch__cancel:focus:not(:active) {
+.form-getInTouch__cancel:focus-visible {
   outline: 1.5px solid #E0B59F;
   outline-offset: 2px;
 }
@@ -446,7 +484,7 @@ textarea {
 .form-getInTouch__send:active {
   background-color: #E0B59F;
 }
-.form-getInTouch__send:focus:not(:active) {
+.form-getInTouch__send:focus-visible {
   outline: 1.5px solid #E0B59F;
   outline-offset: 2px;
 }
